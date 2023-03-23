@@ -41,4 +41,4 @@ patchesJson6902:
         value: argocd
       - op: add
         path: /spec/destination/namespace
-        value: 02-interaxo
+        value: 01-interaxo
