@@ -30,7 +30,7 @@ patches:
     patch: |-
       - op: add
         path: /spec/source/helm/valueFiles/-
-        value: ./../../envs/se-prod-01/01-interaxo/quarkus-values.yaml
+        value: $ARGOCD_APP_SOURCE_PATH/envs/se-prod-01/01-interaxo/quarkus-values.yaml
 patchesJson6902:
   - target:
       kind: Application
