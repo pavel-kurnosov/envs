@@ -12,7 +12,7 @@ spec:
     repoURL: "https://github.com/pavel-kurnosov/envs"
     targetRevision: HEAD
   sources: []
-  project: default
+  project: interaxo
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

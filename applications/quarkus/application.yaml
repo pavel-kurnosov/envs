@@ -4,7 +4,7 @@ metadata:
   name: quarkus
   namespace: argocd
 spec:
-  project: default
+  project: interaxo
   source:
     chart: quarkus
     repoURL: https://redhat-developer.github.io/redhat-helm-charts
