@@ -5,10 +5,10 @@ namespace: prod-se
 namePrefix: prod-
 
 resources:
-  - ../../applications/interaxo
+  - ../../../applications/interaxo
 
 components:
-  - ../../variants/se
+  - ../../../variants/se
 
 patchesStrategicMerge:
   - deployment.yml
