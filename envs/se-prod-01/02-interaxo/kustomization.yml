@@ -14,4 +14,12 @@ patchesStrategicMerge:
   - deployment.yml
   - version.yml
   - settings.yml
-  - ingress.yml
+
+patches:
+  - target:
+      kind: Ingress
+      name: interaxo-ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/http/paths/0/path
+        value: /02-interaxo
