@@ -4,13 +4,15 @@ metadata:
   name: quarkus
 spec:
   project: interaxo
-  source:
-    chart: quarkus
-    repoURL: https://redhat-developer.github.io/redhat-helm-charts
-    targetRevision: 0.0.3
-    helm:
-      valueFiles:
-        - values.yaml
-        - ../../envs/se-prod-01/01-interaxo/quarkus-values.yaml
+  sources:
+    - chart: quarkus
+      repoURL: https://redhat-developer.github.io/redhat-helm-charts
+      targetRevision: 0.0.3
+      helm:
+        valueFiles:
+          - values.yaml
+    - repoURL: "https://github.com/pavel-kurnosov/envs.git"
+      targetRevision: HEAD
+      ref: values
   destination:
     server: "https://kubernetes.default.svc"
