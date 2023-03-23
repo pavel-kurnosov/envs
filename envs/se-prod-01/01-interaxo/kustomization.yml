@@ -5,7 +5,7 @@ namespace: prod-se
 namePrefix: prod-
 
 resources:
-  - ../../application/interaxo
+  - ../../applications/interaxo
 
 components:
   - ../../variants/se

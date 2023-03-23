@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 01-interaxo
+spec:
+  destination:
+    name: ""
+    namespace: 01-interaxo
+    server: "https://kubernetes.default.svc"
+  source:
+    path: envs/se-prod-01/01-interaxo
+    repoURL: "https://github.com/pavel-kurnosov/envs"
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
