@@ -39,3 +39,6 @@ patchesJson6902:
       - op: replace
         path: /metadata/namespace
         value: argocd
+      - op: add
+        path: /spec/destination/namespace
+        value: 02-interaxo
