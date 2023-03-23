@@ -14,4 +14,3 @@ patchesStrategicMerge:
   - deployment.yml
   - version.yml
   - settings.yml
-  - ingress.yml
