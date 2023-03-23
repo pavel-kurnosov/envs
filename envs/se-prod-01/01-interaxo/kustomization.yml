@@ -6,6 +6,7 @@ namePrefix: prod-
 
 resources:
   - ../../../applications/interaxo
+  - ../../../applications/quarkus
 
 components:
   - ../../../variants/se
@@ -23,3 +24,10 @@ patches:
       - op: replace
         path: /spec/rules/0/http/paths/0/path
         value: /01-interaxo
+  - target:
+      kind: Application
+      name: quarkus
+    patch: |-
+      - op: add
+        path: /spec/source/helm/valueFiles/-
+        value: ./envs/se-prod-01/01-interaxo/quarkus-values.yaml
