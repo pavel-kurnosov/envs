@@ -9,3 +9,4 @@ spec:
     - http:
         paths:
           - path: /01-interaxo
+            pathType: Prefix
