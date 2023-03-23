@@ -12,16 +12,3 @@ spec:
   clusterResourceWhitelist:
     - group: "*"
       kind: "*"
-  roles:
-    - name: interaxo-dev
-      description: Admin privileges to inetraxo team
-      policies:
-        - p, proj:interaxo-dev:admin, applications, *, interaxo-dev/*, allow
-      groups:
-        - interaxo-dev
-    - name: interaxo-dev-view
-      description: view privileges to inetraxo team
-      policies:
-        - p, proj:interaxo-dev:read-only, applications, *, interaxo-dev/*, allow
-      groups:
-        - interaxo-dev-view
