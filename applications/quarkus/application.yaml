@@ -11,5 +11,6 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+        - ../../envs/se-prod-01/01-interaxo/quarkus-values.yaml
   destination:
     server: "https://kubernetes.default.svc"
