@@ -1,6 +1,6 @@
 deploy:
-  replicas: 1
+  replicas: 3
+  route:
+    enabled: false
 build:
-  enabled: false
-route:
   enabled: false
