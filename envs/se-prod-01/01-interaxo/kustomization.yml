@@ -30,7 +30,7 @@ patches:
     patch: |-
       - op: add
         path: /spec/sources/0/helm/valueFiles/-
-        value: $values/envs/se-prod-01/01-interaxo/quarkus-values.yaml
+        value: $repo/envs/se-prod-01/01-interaxo/quarkus-values.yaml
 patchesJson6902:
   - target:
       kind: Application

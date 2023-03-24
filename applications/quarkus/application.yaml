@@ -11,8 +11,8 @@ spec:
       helm:
         valueFiles:
           - values.yaml
-    - repoURL: "https://github.com/pavel-kurnosov/envs.git"
+    - repoURL: "$ARGOCD_APP_SOURCE_REPO_URL"
       targetRevision: HEAD
-      ref: values
+      ref: repo
   destination:
     server: "https://kubernetes.default.svc"

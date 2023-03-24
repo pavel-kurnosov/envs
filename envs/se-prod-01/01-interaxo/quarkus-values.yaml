@@ -1,3 +1,7 @@
 quarkus:
   deploy:
     replicas: 1
+  build:
+    enabled: false
+  route:
+    enabled: false
