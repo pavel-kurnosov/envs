@@ -1,9 +1,8 @@
-quarkus:
-  build:
+build:
+  enabled: false
+deploy:
+  route:
     enabled: false
-  deploy:
-    route:
-      enabled: false
-    replicas: 2
-  image:
-    name: quay.io/redhatworkshops/gitops-helm-quarkus
+  replicas: 2
+image:
+  name: quay.io/redhatworkshops/gitops-helm-quarkus

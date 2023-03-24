@@ -1,7 +1,6 @@
-quarkus:
-  deploy:
-    replicas: 2
-  build:
-    enabled: false
-  route:
-    enabled: false
+deploy:
+  replicas: 1
+build:
+  enabled: false
+route:
+  enabled: false
