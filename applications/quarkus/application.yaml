@@ -11,7 +11,7 @@ spec:
       helm:
         valueFiles:
           - values.yaml
-    - repoURL: $ARGOCD_APP_SOURCE_REPO_URL
+    - repoURL: "https://github.com/pavel-kurnosov/envs.git"
       targetRevision: HEAD
       ref: repo
   destination:
