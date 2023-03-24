@@ -13,3 +13,19 @@ k apply -f ./envs/se-prod-01/02-interaxo.yaml -n argocd
 
 Variants consists of common property for location or env type like dev, stage or prod.
 Evnts folder contains cluster name and applications that available in the cluster.
+
+## Run interaxo
+
+```
+k apply -f ./envs/se-prod-01/00-app-project.yaml -n argocd
+
+```
+
+This will create a app project interaxo that all IX instances will use.
+
+Then you create a 01-interaxo project using
+
+```
+k apply -f ./envs/se-prod-01/01-interaxo.yaml -n argocd
+
+```

@@ -11,6 +11,8 @@ spec:
     path: envs/se-prod-01/02-interaxo
     repoURL: "https://github.com/pavel-kurnosov/envs"
     targetRevision: HEAD
+    plugin:
+      name: kustomized-helm
   sources: []
   project: interaxo
   syncPolicy:

@@ -6,6 +6,7 @@ namePrefix: prod-
 
 resources:
   - ../../../applications/interaxo
+  - ../../../applications/quarkus-helm
 
 components:
   - ../../../variants/se
