@@ -1,5 +1,4 @@
 deploy:
-  replicas: 3
   route:
     enabled: false
 build:
