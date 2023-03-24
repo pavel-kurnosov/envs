@@ -10,7 +10,7 @@ spec:
       targetRevision: 0.0.3
       helm:
         valueFiles:
-          - values.yaml
+          - $repo/applications/quarkus/values.yaml
     - repoURL: "https://github.com/pavel-kurnosov/envs.git"
       targetRevision: HEAD
       ref: repo
