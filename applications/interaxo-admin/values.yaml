@@ -1,0 +1,50 @@
+replicaCount: 1
+image:
+  registry: tribiaunstable.azurecr.io
+  repository: interaxo/interaxo-admin
+  tag: main-b23
+service:
+  type: ClusterIP
+environment:
+  BASENAME: /admin
+  BASE_API_URL: /api
+  AUTH0_DOMAIN: login.collaboration-sso-dev.com
+  AUTH0_CLIENT_ID: aIDB9AsQdfNzyC9sjRdqYPiejte7Vflu
+  AUTH0_AUDIENCE: https://api.interaxo.com/v1/
+  INTERAXO_URL: https://ix.interaxo.dev.tribia.io/
+  INTERAXO_HELP_CENTER_URL: https://jointcollaboration.zendesk.com/access/jwt?theme=hc&hc=true&force_unaltered_return_to=true&return_to=https://support.interaxo.com/hc/
+  VB_API_URL: https://vb.interaxo.dev.tribia.io
+  NEW_RELIC_ENABLED: false
+  NEW_RELIC_APP_ID:
+  NEW_RELIC_LICENSE_KEY:
+  NEW_RELIC_ACCOUNT_ID:
+  NEW_RELIC_TRUST_KEY:
+  NEW_RELIC_AGENT_ID:
+  UNLEASH_URL: https://ix.interaxo.dev.tribia.io/unleash
+  UNLEASH_CLIENT_KEY: 340jbIv021w1HBZ5gahkya3nK6Rg6WQRd9&OhKvMbs6N4tNAEJrPXccEQ6IddXX3De
+  UNLEASH_REFRESH_INTERVAL: 60
+  UNLEASH_APP_NAME: interaxo-admin
+  UNLEASH_ENVIRONMENT: development
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+metrics:
+  enabled: false
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128M
+ingress:
+  enabled: false
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 500m
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - name: ix.interaxo.dev.tribia.io
+      path: /admin
+  tls:
+    - secretName: ix-interaxo-tls-secret
+      hosts:
+        - ix.interaxo.dev.tribia.io

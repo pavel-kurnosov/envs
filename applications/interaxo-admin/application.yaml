@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: interaxo-admin
+spec:
+  project: interaxo
+  sources:
+    - chart: nginx
+      repoURL: https://tribiaunstable.azurecr.io/helm/v1/repo
+      targetRevision: 6.0.7
+      helm:
+        valueFiles:
+          - $repo/applications/interaxo-admin/values.yaml
+    - repoURL: "https://github.com/pavel-kurnosov/envs.git"
+      targetRevision: HEAD
+      ref: repo
+  destination:
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

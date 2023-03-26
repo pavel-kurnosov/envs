@@ -7,6 +7,7 @@ namePrefix: prod-
 resources:
   - ../../../applications/interaxo
   - ../../../applications/quarkus
+  - ../../../applications/interaxo-admin
 
 components:
   - ../../../variants/se
@@ -32,6 +33,19 @@ patchesJson6902:
       - op: add
         path: /spec/sources/0/helm/valueFiles/-
         value: $repo/envs/se-prod-01/01-interaxo/quarkus-values.yaml
+      - op: replace
+        path: /metadata/namespace
+        value: argocd
+      - op: add
+        path: /spec/destination/namespace
+        value: 01-interaxo
+  - target:
+      kind: Application
+      name: interaxo-admin
+    patch: |-
+      - op: add
+        path: /spec/sources/0/helm/valueFiles/-
+        value: $repo/envs/se-prod-01/01-interaxo/interaxo-admin-values.yaml
       - op: replace
         path: /metadata/namespace
         value: argocd

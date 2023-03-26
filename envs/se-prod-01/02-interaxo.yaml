@@ -11,11 +11,11 @@ spec:
     path: envs/se-prod-01/02-interaxo
     repoURL: "https://github.com/pavel-kurnosov/envs"
     targetRevision: HEAD
-    plugin:
-      name: kustomized-helm
-      env:
-        - name: helm_args
-          value: "--set targetRevision={{ .Values.spec.source.targetRevision }}"
+    # plugin:
+    #   name: kustomized-helm
+    #   env:
+    #     - name: helm_args
+    #       value: "--set targetRevision={{ .Values.spec.source.targetRevision }}"
 
   sources: []
   project: interaxo

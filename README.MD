@@ -29,3 +29,8 @@ Then you create a 01-interaxo project using
 k apply -f ./envs/se-prod-01/01-interaxo.yaml -n argocd
 
 ```
+
+## Repositories
+
+Create a repository for github and for helm from configuration file.
+Config default docker-registry for cluster
