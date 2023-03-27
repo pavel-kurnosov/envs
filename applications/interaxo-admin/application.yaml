@@ -5,8 +5,8 @@ metadata:
 spec:
   project: interaxo
   sources:
-    - chart: helm/nginx
-      repoURL: tribiaunstable.azurecr.io
+    - chart: nginx
+      repoURL: https://tribiaunstable.azurecr.io/helm/v1/repo/
       targetRevision: 6.0.7
       helm:
         valueFiles:
