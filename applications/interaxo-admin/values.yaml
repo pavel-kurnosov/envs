@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   registry: tribiaunstable.azurecr.io
   repository: interaxo/interaxo-admin
-  tag: main
+  tag: main-b23
 service:
   type: ClusterIP
 environment:
