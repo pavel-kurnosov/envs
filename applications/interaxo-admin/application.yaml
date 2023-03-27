@@ -5,7 +5,7 @@ metadata:
 spec:
   project: interaxo
   sources:
-    - chart: tribiaunstable/nginx
+    - chart: nginx
       repoURL: tribiaunstable.azurecr.io
       targetRevision: 6.0.7
       helm:
